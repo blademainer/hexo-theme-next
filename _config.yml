@@ -599,7 +599,7 @@ gitalk:
 # Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Reddit,Delicious,StumbleUpon,Pinterest,Facebook,GooglePlus,
 # Slashdot,Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
-  enable: false
+  enable: true
   postbottom:
     enable: false
     options:
@@ -608,7 +608,7 @@ needmoreshare2:
       position: bottomCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
-    enable: false
+    enable: true
     options:
       iconStyle: box
       boxForm: horizontal
@@ -711,8 +711,8 @@ busuanzi_count:
   post_views: true
   post_views_icon: file-o
 
-# Show Views/Visitors of the website/page with busuanzi.
-# Get more information on http://ibruce.info/2015/04/04/busuanzi
+# Show Views/Visitors of the website/page with clustermap.
+# Get more information on https://clustrmaps.com
 clustermap_count:
   enable: true
   id: 0YMy0GZZDugC8YZp9hWvf4tVbWlAGPUEsDxEt2iIkwI
