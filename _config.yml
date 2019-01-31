@@ -702,29 +702,30 @@ firestore:
 
 # Show Views/Visitors of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
-#busuanzi_count:
-#  enable: false
-#  total_visitors: true
-#  total_visitors_icon: user
-#  total_views: true
-#  total_views_icon: eye
-#  post_views: true
-#  post_views_icon: eye
 busuanzi_count:
-  # count values only if the other configs are false
-  enable: true #true #
-  # custom uv span for the whole site
-  site_uv: true
-  site_uv_header:  <i class="fa fa-user-circle-o"></i>  #<i  class="fa fa-user"></i>
-  site_uv_footer:
-  # custom pv span for the whole site
-  site_pv: true #false
-  site_pv_header:  <i class="fa fa-eye"></i>
-  site_pv_footer:
-  # custom pv span for one page only
-  page_pv: false
-  page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: user-circle-o
+  total_views: true
+  total_views_icon: eye
+  post_views: true
+  post_views_icon: file-o
+
+#busuanzi_count:
+#  # count values only if the other configs are false
+#  enable: true #true #
+#  # custom uv span for the whole site
+#  site_uv: true
+#  site_uv_header:  <i class="fa fa-user-circle-o"></i>  #<i  class="fa fa-user"></i>
+#  site_uv_footer:
+#  # custom pv span for the whole site
+#  site_pv: true #false
+#  site_pv_header:  <i class="fa fa-eye"></i>
+#  site_pv_footer:
+#  # custom pv span for one page only
+#  page_pv: false
+#  page_pv_header: <i class="fa fa-file-o"></i>
+#  page_pv_footer:
 
 # Show Views/Visitors of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
@@ -783,7 +784,7 @@ local_search:
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
   # show top n results per article, show all results by setting to -1
-  top_n_per_article: 10
+  top_n_per_article: 100
   # unescape html strings to the readable one
   unescape: false
 
