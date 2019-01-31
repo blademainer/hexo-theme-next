@@ -1,0 +1,3 @@
+[submodule "source/lib/needsharebutton"]
+	path = source/lib/needsharebutton
+	url = https://github.com/theme-next/theme-next-needmoreshare2

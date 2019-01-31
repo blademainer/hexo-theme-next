@@ -601,7 +601,7 @@ gitalk:
 needmoreshare2:
   enable: true
   postbottom:
-    enable: false
+    enable: true
     options:
       iconStyle: box
       boxForm: horizontal
