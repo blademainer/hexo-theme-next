@@ -256,9 +256,9 @@ sidebar:
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 12
   # Back to top in sidebar.
-  b2t: false
+  b2t: true 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
@@ -271,7 +271,7 @@ sidebar:
 scroll_to_more: true
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: false
+save_scroll: true 
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
@@ -313,9 +313,9 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true 
     # Show text copy result
-    show_result: false
+    show_result: true 
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -336,9 +336,9 @@ reward:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
+  enable: true 
   title: # custom header, leave empty to use the default one
-  display_in_home: false
+  display_in_home: true 
   params:
     maxCount: 5
     #PPMixingRate: 0.0
@@ -359,10 +359,10 @@ post_edit:
 # ---------------------------------------------------------------
 
 # Disable Baidu tranformation on mobile devices.
-disable_baidu_tranformation: false
+disable_baidu_tranformation: true 
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true 
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
