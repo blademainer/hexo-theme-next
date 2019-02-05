@@ -342,7 +342,7 @@ related_posts:
   params:
     maxCount: 5
     #PPMixingRate: 0.0
-    #isDate: false
+    #isDate: true
     #isImage: false
     #isExcerpt: false
 
