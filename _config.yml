@@ -141,7 +141,7 @@ menu:
   home: / || home
   about: /about/ || user
   #tags: /tags/ || tags
-  tags: /tags
+  tags: /tags || tags
   categories: /categories/ || th
   archives: /archives/ || archive
 #  schedule: /schedule/ || calendar
@@ -303,7 +303,7 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true 
   awl: 4
   wpm: 275
 
@@ -327,10 +327,10 @@ codeblock:
 # If true, reward would be displayed in every article by default.
 # And you can show or hide one article specially through add page variable `reward: true/false`.
 reward:
-  enable: false
-  #comment: Donate comment here
-  #wechatpay: /images/wechatpay.jpg
-  #alipay: /images/alipay.jpg
+  enable: true 
+  #comment: comments here
+  wechatpay: /images/reward/wechatpay.jpg
+  alipay: /images/reward/alipay.jpg
   #bitcoin: /images/bitcoin.jpg
 
 # Related popular posts
