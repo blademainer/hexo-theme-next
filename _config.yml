@@ -341,10 +341,10 @@ related_posts:
   display_in_home: true 
   params:
     maxCount: 5
-    #PPMixingRate: 0.0
+    #PPMixingRate: 0.1
     #isDate: true
-    #isImage: false
-    #isExcerpt: false
+    #isImage: true
+    #isExcerpt: true
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -606,14 +606,15 @@ needmoreshare2:
       iconStyle: box
       boxForm: horizontal
       position: bottomCenter
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      #networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,Twitter,Facebook
   float:
     enable: true
     options:
       iconStyle: box
       boxForm: horizontal
       position: middleRight
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,Twitter,Facebook
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters
@@ -857,11 +858,11 @@ fastclick: false
 
 # Added switch option for separated repo in 6.0.0.
 # Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
-lazyload: false
+lazyload: true 
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
-pace: false
+pace: true 
 # Themes list:
 # pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
 # pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
@@ -914,7 +915,7 @@ vendors:
   # Example:
   # jquery: //cdn.jsdelivr.net/npm/jquery@2/dist/jquery.min.js
   # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
-  jquery:
+  jquery: //cdn.jsdelivr.net/npm/jquery@2/dist/jquery.min.js
 
   # Internal version: 2.1.5
   # See: https://fancyapps.com/fancybox
@@ -938,7 +939,7 @@ vendors:
   # Example:
   # lazyload: //cdn.jsdelivr.net/npm/jquery-lazyload@1/jquery.lazyload.min.js
   # lazyload: //cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
-  lazyload: true
+  lazyload: //cdn.jsdelivr.net/npm/jquery-lazyload@1/jquery.lazyload.min.js 
 
   # Internal version: 1.2.1
   # See: http://velocityjs.org
