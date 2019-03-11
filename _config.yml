@@ -897,8 +897,8 @@ canvas_sphere: false
 # zIndex: The display level of the ribbon.
 canvas_ribbon:
   enable: true 
-  size: 300
-  alpha: 0.6
+  size: 90
+  alpha: 0.3
   zIndex: -1
 
 # Script Vendors.
