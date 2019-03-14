@@ -206,8 +206,11 @@ links_icon: link
 links_title: Links
 links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com
+links:
+  a栋: https://zhangmingdong.com/
+  jimmysong: https://jimmysong.io/
+
+  
 
 # Sidebar Avatar
 avatar:
