@@ -152,6 +152,7 @@ menu:
 menu_settings:
   icons: true
   badges: true
+  background_image: http://cdn.xiongyingqi.com/static/images/colorful2.back-jpg
 
 
 # ---------------------------------------------------------------
