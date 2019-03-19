@@ -720,7 +720,7 @@ busuanzi_count:
 # Show Views/Visitors of the website/page with clustermap.
 # Get more information on https://clustrmaps.com
 clustermap_count:
-  enable: false
+  enable: true 
   id: 0YMy0GZZDugC8YZp9hWvf4tVbWlAGPUEsDxEt2iIkwI
   type: map_v2 # globe or map_v2
   is_custom_style: true
