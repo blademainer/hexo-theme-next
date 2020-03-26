@@ -5,7 +5,7 @@
 
 # If false, merge configs from `_data/next.yml` into default configuration (rewrite).
 # If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
-# And if true, all config from default NexT `_config.yml` have to be copied into `next.yml`. Use if you know what you are doing.
+# And if true, all config from default NexT `_config.yml` must be copied into `next.yml`. Use if you know what you are doing.
 # Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
 override: false
 
@@ -22,16 +22,16 @@ minify: false
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-#head: source/_data/head.swig
-#header: source/_data/header.swig
-#sidebar: source/_data/sidebar.swig
-#postMeta: source/_data/post-meta.swig
-#postBodyEnd: source/_data/post-body-end.swig
-#footer: source/_data/footer.swig
-#bodyEnd: source/_data/body-end.swig
-#variable: source/_data/variables.styl
-#mixin: source/_data/mixins.styl
-#style: source/_data/styles.styl
+  #head: source/_data/head.swig
+  #header: source/_data/header.swig
+  #sidebar: source/_data/sidebar.swig
+  #postMeta: source/_data/post-meta.swig
+  #postBodyEnd: source/_data/post-body-end.swig
+  #footer: source/_data/footer.swig
+  #bodyEnd: source/_data/body-end.swig
+  #variable: source/_data/variables.styl
+  #mixin: source/_data/mixins.styl
+  #style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -39,6 +39,14 @@ custom_file_path:
 # See: https://theme-next.org/docs/getting-started/
 # ---------------------------------------------------------------
 
+# To get or check favicons visit: https://realfavicongenerator.net
+# Put your favicons into `hexo-site/source/` (recommend) or `hexo-site/themes/next/source/images/` directory.
+
+# Default NexT favicons placed in `hexo-site/themes/next/source/images/` directory.
+# And if you want to place your icons in `hexo-site/source/` root directory, you must remove `/images` prefix from pathes.
+
+# For example, you put your favicons into `hexo-site/source/images` directory.
+# Then need to rename & redefine them on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
   small: /images/favicon.ico
   medium: /images/favicon.ico
@@ -46,9 +54,6 @@ favicon:
   safari_pinned_tab: /images/favicon.ico
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
-
-# Show multilingual switcher in footer.
-language_switcher: false
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
@@ -81,6 +86,11 @@ footer:
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
     gongan_icon_url:
 
+
+  # -------------------------------------------------------------
+  # Any custom text can be defined here.
+  #custom_text: Hosted by <a href="https://pages.coding.me" class="theme-link" rel="noopener" target="_blank">Coding Pages</a>
+
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/share-your-work/licensing-types-examples
 # Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
@@ -99,7 +109,6 @@ creative_commons:
 
 # Schemes
 scheme: Gemini
-#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
@@ -134,6 +143,7 @@ menu_settings:
   badges: true
   background_image: http://cdn.xiongyingqi.com/static/images/colorful2.back-jpg
 
+
 # ---------------------------------------------------------------
 # Sidebar Settings
 # See: https://theme-next.org/docs/theme-settings/sidebar
@@ -163,15 +173,6 @@ sidebar:
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
-# Sidebar Avatar
-avatar:
-  # Replace the default image and set the url here.
-  url: #/images/avatar.gif
-  # If true, the avatar will be dispalyed in circle.
-  rounded: false
-  # If true, the avatar will be rotated with the cursor.
-  rotated: false
-
 # Posts / Categories / Tags in sidebar.
 site_state: true
 
@@ -180,16 +181,16 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-#GitHub: https://github.com/yourname || github
-#E-Mail: mailto:yourname@gmail.com || envelope
-#Weibo: https://weibo.com/yourname || weibo
-#Google: https://plus.google.com/yourname || google
-#Twitter: https://twitter.com/yourname || twitter
-#FB Page: https://www.facebook.com/yourname || facebook
-#StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-#YouTube: https://youtube.com/yourname || youtube
-#Instagram: https://instagram.com/yourname || instagram
-#Skype: skype:yourname?call|chat || skype
+  #GitHub: https://github.com/yourname || github
+  #E-Mail: mailto:yourname@gmail.com || envelope
+  #Weibo: https://weibo.com/yourname || weibo
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
 
 social_icons:
   enable: true
@@ -197,17 +198,29 @@ social_icons:
   transition: false
 
 # Blog rolls
-links_settings:
-  icon: link
-  title: Links
-  # Available values: block | inline
-  layout: block
-
+links_icon: link
+links_title: Links
+links_layout: block
+#links_layout: inline
 links:
   ethanZhang: http://blog.jia58960.com/
   a栋: https://zhangmingdong.com/
   jimmysong: https://jimmysong.io/
-#Title: http://yoursite.com
+
+
+
+# Sidebar Avatar
+avatar:
+  # in theme directory(source/images): /images/avatar.gif
+  # in site  directory(source/uploads): /uploads/avatar.gif
+  # You can also use other linking images.
+  url: #/images/avatar.gif
+  # If true, the avatar would be dispalyed in circle.
+  rounded: false
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  # If true, the avatar would be rotated with the cursor.
+  rotated: false
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -221,6 +234,7 @@ toc:
   expand_all: false
   # Maximum heading depth of generated toc.
   max_depth: 6
+
 
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
@@ -237,8 +251,20 @@ chat:
 # See: https://theme-next.org/docs/theme-settings/posts
 # ---------------------------------------------------------------
 
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically saving scroll position on each post/page in cookies.
+save_scroll: true
+
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
+
+# Automatically Excerpt. Not recommend.
+# Use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: true
+  length: 50
 
 # Read more button
 # If true, the read more button will be displayed in excerpt section.
@@ -250,7 +276,7 @@ post_meta:
   created_at: true
   updated_at:
     enable: true
-    another_day: true
+    another_day: false
   categories: true
 
 # Post wordcount display settings
@@ -259,6 +285,8 @@ symbols_count_time:
   separated_meta: true
   item_text_post: true
   item_text_total: true
+  awl: 4
+  wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -298,10 +326,10 @@ related_posts:
   display_in_home: true
   params:
     maxCount: 5
-    #PPMixingRate: 0.0
-    #isDate: false
-    #isImage: false
-    #isExcerpt: false
+    #PPMixingRate: 0.1
+    #isDate: true
+    #isImage: true
+    #isExcerpt: true
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -314,38 +342,12 @@ post_edit:
 # Available values: left | right | false
 post_navigation: left
 
-
-# ---------------------------------------------------------------
-# Custom Page Settings
-# See: https://theme-next.org/docs/theme-settings/custom-pages
-# ---------------------------------------------------------------
-
-# TagCloud settings for tags page.
-tagcloud:
-  # All values below are same as default, change them by yourself.
-  min: 12 # Minimun font size in px
-  max: 30 # Maxium font size in px
-  start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
-  end: "#111" # End color (hex, rgba, hsla or color keywords)
-  amount: 200 # Amount of tags, change it if you have more than 200 tags
-
-# Google Calendar
-# Share your recent schedule to others via calendar page.
-calendar:
-  calendar_id: <required> # Your Google account E-Mail
-  api_key: <required>
-  orderBy: startTime
-  offsetMax: 24 # Time Range
-  offsetMin: 4 # Time Range
-  showDeleted: false
-  singleEvents: true
-  maxResults: 250
-
-
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
 
+# Disable Baidu tranformation on mobile devices.
+disable_baidu_tranformation: true
 # Set the text alignment in posts / pages.
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
@@ -357,6 +359,9 @@ mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
+
+# Hide sticky headers and color the menu bar on Safari (iOS / macOS).
+safari_rainbow: false
 
 # Custom Logo (Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
@@ -465,6 +470,14 @@ font:
 # Disable Baidu transformation on mobile devices.
 disable_baidu_transformation: false
 
+# Set a canonical link tag for your Hexo site.
+# See: https://support.google.com/webmasters/answer/139066
+# Remember to set up your URL in Hexo `_config.yml` (e.g. url: http://yoursite.com)
+canonical: true
+
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
+seo: false
+
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
 index_with_subtitle: false
@@ -488,14 +501,10 @@ yandex_site_verification:
 # See: https://ziyuan.baidu.com/site
 baidu_site_verification:
 
-# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: true
-
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
 # See: https://theme-next.org/docs/third-party-services/
-# More plugins: https://github.com/theme-next/awesome-next
 # You may need to install dependencies or set CDN URLs in `vendors`
 # There are two different CDN providers by default:
 #   - jsDelivr (cdn.jsdelivr.net), works everywhere even in China
@@ -543,7 +552,6 @@ lazyload: false
 pangu: false
 
 # Quicklink Support
-# Do not enable both `pjax` and `quicklink`.
 # For more information: https://github.com/GoogleChromeLabs/quicklink
 # Front-matter (unsupport home archive).
 quicklink:
@@ -621,10 +629,10 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
-  notify: false # Mail notifier
+  enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
+  appid: Ugm8xnmL9FAJbdxu2D4KTfQn-gzGzoHsz # your leancloud application appid
+  appkey: AHoQ0j1sQCBBu2WMpgQV5uxt # your leancloud application appkey
+  notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # Comment box placeholder
   avatar: mm # Gravatar style
@@ -701,14 +709,13 @@ cnzz_siteid:
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
   enable: false
-  app_id: # <your app id>
-  app_key: # <your app key>
-  # Required for apps from CN region
-  server_url: # <your server url>
+  app_id: # <app_id>
+  app_key: # <app_key>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
   security: true
+  betterPerformance: false
 
 # Another tool to show number of visitors to each article.
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
@@ -730,11 +737,41 @@ busuanzi_count:
   post_views: true
   post_views_icon: file-o
 
+# Show Views/Visitors of the website/page with clustermap.
+# Get more information on https://clustrmaps.com
+clustermap_count:
+  enable: true
+  id: 0YMy0GZZDugC8YZp9hWvf4tVbWlAGPUEsDxEt2iIkwI
+  type: map_v2 # globe or map_v2
+  is_custom_style: true
+  custom_style: "cl=5e5e5e&w=300&t=n&co=eeeeee&ct=808080&cmo=3acc3a&cmn=ff5353" #custom style
+
+
+
 
 # ---------------------------------------------------------------
 # Search Services
 # See: https://theme-next.org/docs/third-party-services/search-services
 # ---------------------------------------------------------------
+# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
+baidu_push: true
+
+# Google Calendar
+# Share your recent schedule to others via calendar page.
+# API Documentation: https://developers.google.com/google-apps/calendar/v3/reference/events/list
+# Enabled APIs and services
+# api_key: https://console.developers.google.com
+# Create & manage a public Google calendar: https://support.google.com/calendar/answer/37083
+calendar:
+  enable: false
+  calendar_id: <required> # Your Google account E-Mail
+  api_key: <required>
+  orderBy: startTime
+  offsetMax: 24 # Time Range
+  offsetMin: 4 # Time Range
+  showDeleted: false
+  singleEvents: true
+  maxResults: 250
 
 # Algolia Search
 # For more information: https://www.algolia.com
@@ -811,9 +848,10 @@ tabs:
     tabs: false
     labels: true
 
-# PDF tag
-# NexT will try to load pdf files natively, if failed, pdf.js will be used.
-# So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
+# PDF tag, requires two plugins: pdfObject and pdf.js
+# pdfObject will try to load pdf files natively, if failed, pdf.js will be used.
+# The following `cdn` setting is only for pdfObject, because cdn for pdf.js might be blocked by CORS policy.
+# So, you must install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
 # See: https://github.com/theme-next/theme-next-pdf
 pdf:
   enable: false
@@ -892,6 +930,7 @@ vendors:
   # Internal path prefix.
   _internal: lib
 
+  # Internal version: 0.2.8
   # Internal version: 3.1.0
   # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
   anime:
@@ -913,8 +952,6 @@ vendors:
   katex:
   copy_tex_js:
   copy_tex_css:
-
-  # Internal version: 0.2.8
   # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
   pjax:
 
@@ -926,13 +963,21 @@ vendors:
   fancybox:
   fancybox_css:
 
+  # Internal version: 1.0.6
+  # See: https://github.com/ftlabs/fastclick
+  # Example:
+  # fastclick: //cdn.jsdelivr.net/npm/fastclick@1/lib/fastclick.min.js
+  # fastclick: //cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
+  fastclick: //cdn.jsdelivr.net/npm/fastclick@1/lib/fastclick.min.js
   # Medium-zoom
   # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
   mediumzoom:
 
-  # Lazyload
-  # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
-  # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.14.0/lozad.min.js
+  # Internal version: 1.9.7
+  # See: https://github.com/tuupola/jquery_lazyload
+  # Example:
+  # lazyload: //cdn.jsdelivr.net/npm/jquery-lazyload@1/jquery.lazyload.min.js
+  # lazyload: //cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
   lazyload: //cdn.jsdelivr.net/npm/jquery-lazyload@1/jquery.lazyload.min.js
 
   # Pangu
@@ -967,9 +1012,14 @@ vendors:
   algolia_search:
   instant_search:
 
+  # PDF
+  # pdfobject: //cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js
+  # pdfobject: //cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js
+  pdfobject:
+
   # Mermaid
   # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
-  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js
+  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.2/mermaid.min.js
   mermaid:
 
   # Internal version: 1.2.1
