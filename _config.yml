@@ -22,16 +22,16 @@ minify: false
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  #head: source/_data/head.swig
-  #header: source/_data/header.swig
-  #sidebar: source/_data/sidebar.swig
-  #postMeta: source/_data/post-meta.swig
-  #postBodyEnd: source/_data/post-body-end.swig
-  #footer: source/_data/footer.swig
-  #bodyEnd: source/_data/body-end.swig
-  #variable: source/_data/variables.styl
-  #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+#head: source/_data/head.swig
+#header: source/_data/header.swig
+#sidebar: source/_data/sidebar.swig
+#postMeta: source/_data/post-meta.swig
+#postBodyEnd: source/_data/post-body-end.swig
+#footer: source/_data/footer.swig
+#bodyEnd: source/_data/body-end.swig
+#variable: source/_data/variables.styl
+#mixin: source/_data/mixins.styl
+#style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -40,10 +40,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/favicon.ico
+  medium: /images/favicon.ico
+  apple_touch_icon: /images/favicon.ico
+  safari_pinned_tab: /images/favicon.ico
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -68,12 +68,12 @@ footer:
   copyright:
 
   # Powered by Hexo & NexT
-  powered: true
+  powered: false
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 粤ICP备15039562号
     # The digit in the num of gongan beian.
     gongan_id:
     # The full num of gongan beian.
@@ -88,8 +88,8 @@ footer:
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
   license: by-nc-sa
-  sidebar: false
-  post: false
+  sidebar: true
+  post: true
   language:
 
 
@@ -98,7 +98,8 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+scheme: Gemini
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
@@ -118,19 +119,20 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || home
-  #about: /about/ || user
   #tags: /tags/ || tags
-  #categories: /categories/ || th
+  categories: /categories/ || th
+  tags: /tags || tags
   archives: /archives/ || archive
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  about: /about/ || user
+#  schedule: /schedule/ || calendar
+#  sitemap: /sitemap.xml || sitemap
+#  commonweal: /404/ || heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
-
+  badges: true
+  background_image: http://cdn.xiongyingqi.com/static/images/colorful2.back-jpg
 
 # ---------------------------------------------------------------
 # Sidebar Settings
@@ -178,16 +180,16 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
-  #Weibo: https://weibo.com/yourname || weibo
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
-  #Skype: skype:yourname?call|chat || skype
+#GitHub: https://github.com/yourname || github
+#E-Mail: mailto:yourname@gmail.com || envelope
+#Weibo: https://weibo.com/yourname || weibo
+#Google: https://plus.google.com/yourname || google
+#Twitter: https://twitter.com/yourname || twitter
+#FB Page: https://www.facebook.com/yourname || facebook
+#StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+#YouTube: https://youtube.com/yourname || youtube
+#Instagram: https://instagram.com/yourname || instagram
+#Skype: skype:yourname?call|chat || skype
 
 social_icons:
   enable: true
@@ -202,7 +204,10 @@ links_settings:
   layout: block
 
 links:
-  #Title: http://yoursite.com
+  ethanZhang: http://blog.jia58960.com/
+  a栋: https://zhangmingdong.com/
+  jimmysong: https://jimmysong.io/
+#Title: http://yoursite.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -253,7 +258,7 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -262,11 +267,16 @@ tag_icon: false
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: false
+  enable: true
   animation: false
   #comment: Donate comment here.
 
 reward:
+  enable: true
+  #comment: comments here
+  wechatpay: /images/reward/wechatpay.jpg
+  alipay: /images/reward/alipay.jpg
+  #bitcoin: /images/bitcoin.jpg
   #wechatpay: /images/wechatpay.png
   #alipay: /images/alipay.png
   #paypal: /images/paypal.png
@@ -275,17 +285,17 @@ reward:
 # Subscribe through Telegram Channel, Twitter, etc.
 # Usage: `Key: permalink || icon` (Font Awesome)
 follow_me:
-  #Twitter: https://twitter.com/username || twitter
-  #Telegram: https://t.me/channel_name || telegram
-  #WeChat: /images/wechat_channel.jpg || wechat
-  #RSS: /atom.xml || rss
+#Twitter: https://twitter.com/username || twitter
+#Telegram: https://t.me/channel_name || telegram
+#WeChat: /images/wechat_channel.jpg || wechat
+#RSS: /atom.xml || rss
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
+  enable: true
   title: # Custom header, leave empty to use the default one
-  display_in_home: false
+  display_in_home: true
   params:
     maxCount: 5
     #PPMixingRate: 0.0
@@ -296,9 +306,9 @@ related_posts:
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
-  enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
-  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
+  enable: true
+  url: https://github.com/blademainer/blog/tree/master/source/ # Link for view source.
+  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit.
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
@@ -343,7 +353,7 @@ text_align:
   mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
@@ -358,9 +368,9 @@ codeblock:
   highlight_theme: normal
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
     style:
 
@@ -479,7 +489,7 @@ yandex_site_verification:
 baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 
 # ---------------------------------------------------------------
@@ -574,11 +584,11 @@ comments:
   lazyload: false
   # Modify texts or order for any navs, here are some examples.
   nav:
-    #disqus:
-    #  text: Load Disqus
-    #  order: -1
-    #gitalk:
-    #  order: -2
+  #disqus:
+  #  text: Load Disqus
+  #  order: -1
+  #gitalk:
+  #  order: -2
 
 # Disqus
 disqus:
@@ -634,12 +644,12 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
-  github_id: # GitHub repo owner
-  repo: # Repository name to store issues
-  client_id: # GitHub Application Client ID
-  client_secret: # GitHub Application Client Secret
-  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  enable: true
+  github_id: blademainer # Github repo owner
+  repo: blademainer.github.com # Repository name to store issues.
+  client_id: 5ed2a22925d0dc421548 # Github Application Client ID
+  client_secret: 90c73f47bc8b33d992d0039af3291303c71c7aab # Github Application Client Secret
+  admin_user: blademainer # GitHub repo owner and collaborators, only these guys can initialize github issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
@@ -712,13 +722,13 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
-  total_visitors_icon: user
+  total_visitors_icon: user-circle-o
   total_views: true
   total_views_icon: eye
   post_views: true
-  post_views_icon: eye
+  post_views_icon: file-o
 
 
 # ---------------------------------------------------------------
@@ -740,16 +750,16 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
-  # If auto, trigger search by changing input.
-  # If manual, trigger search by pressing enter key or search button.
+  enable: true
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
   trigger: auto
-  # Show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
-  # Unescape html strings to the readable one.
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 100
+  # unescape html strings to the readable one
   unescape: false
   # Preload the search data when the page loads.
-  preload: false
+  preload: true
 
 # Swiftype Search API Key
 swiftype_key:
@@ -825,7 +835,7 @@ mermaid:
 # For more information: http://velocityjs.org
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # Transition variants:
     # fadeIn | flipXIn | flipYIn | flipBounceXIn | flipBounceYIn
@@ -845,7 +855,7 @@ motion:
 # Dependencies: https://github.com/theme-next/theme-next-pace
 # For more information: https://github.com/HubSpot/pace
 pace:
-  enable: false
+  enable: true
   # Themes list:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
@@ -912,7 +922,7 @@ vendors:
   # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
   # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
   # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-  jquery:
+  jquery: //cdn.jsdelivr.net/npm/jquery@2/dist/jquery.min.js
   fancybox:
   fancybox_css:
 
@@ -923,7 +933,7 @@ vendors:
   # Lazyload
   # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
   # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.14.0/lozad.min.js
-  lazyload:
+  lazyload: //cdn.jsdelivr.net/npm/jquery-lazyload@1/jquery.lazyload.min.js
 
   # Pangu
   # pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
